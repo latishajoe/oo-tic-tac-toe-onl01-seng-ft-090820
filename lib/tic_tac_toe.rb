@@ -40,10 +40,16 @@ class TicTacToe
       !position_taken?(index)
     end
 
-      def turn_count
+    def turn_count
       @board.count{|token| token == "X" || token == "O"}
     end
 
+    def current_player
+      if turn_count % 2 == 0
+        "X"
+      else 
+        "O"
+    end 
 
 
 
